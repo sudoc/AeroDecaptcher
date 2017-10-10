@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AeroDecaptcher
 
 AeroDecaptcher is a simple script that "solve" captcha in Aero network. It is written in Bash, but also needs Perl for tunneling via DNS queries. Script can be run on Linux and Windows via Cygwin. It does not need administrator permission. For solving Captcha it uses human-based service called https://2captcha.com
@@ -88,4 +87,3 @@ THIS SOFTWARE IS PROVIDED AS IS AND IT MAY BY NOT ALLOWED TO USE THAT, AUTHOR IS
 
 USE AT YOUR OWN RISK!
 
->>>>>>> cc44649207a88f46b6dbac401bfe2c18ccfc6e34
