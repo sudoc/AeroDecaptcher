@@ -1,0 +1,9 @@
+aero_url="http://bdi.free.aero2.net.pl:8080/"
+temp_file="aero"
+captcha_file="captcha.jpg"
+### 2captcha ###
+apikey="YOUR_API_KEY"
+### vpnoverdns ###
+proxy_address="127.0.0.1"
+proxy_port="3128"
+vpnoverdns_loc="./vpnoverdns.pl"
