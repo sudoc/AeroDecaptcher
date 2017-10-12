@@ -15,7 +15,6 @@
 ## USE AT YOUR OWN RISK! ##
 ###########################
 
-
 ##overrun protection##
 main_pid=$$
 pid_loc="main_pid"
@@ -106,17 +105,17 @@ while [ "$success" != "true" ] ; do
 		echo "retrying..."
 		counter=0
 		while [ "$response" != "OK" ] ; do
-			counter=$counter+1
+			counter=[$counter+1]
 			curl $data -x $proxy_address:$proxy_port > $temp_file
 			response=`cat $temp_file | grep "OK|" | head -c 2`
 			if [ "$response" != "OK" ] ; then
-				if [ "$counter" = "3" ] ; then
+				if [ "$counter" = "16" ] ; then
 					echo "captcha not ready."
 					rm $pid_loc
 					kill -9 $pid
 					exit 1
 				fi
-				sleep 3
+				sleep 6
 			fi
 		done
 	fi
@@ -140,7 +139,7 @@ while [ "$success" != "true" ] ; do
 		sleep 20
 	fi
 	
-	main_counter=$main_counter+1
+	main_counter=$[main_counter+1]
 	if [ "$main_counter" = "3" ] ; then
 		echo "Unknown error"
 		kill -9 $pid
